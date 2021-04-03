@@ -65,4 +65,39 @@
 // Create a function that takes numbers as arguments, adds them together, and returns the product of digits until the answer is only 1 digit long.
 // Difficulty: Very Hard
 // Date: April 2 2021
-// Solve Time: 
+// Solve Time: 19 minutes
+
+
+function sumDigProd(...nums) {
+    const sum = nums.reduce((total, num) => total += num, 0);
+    const str = sum.toString();
+
+    if(str.length === 1) {
+        console.log(sum)
+    } else {
+        return multiplyDigits(str);
+    }
+
+    function multiplyDigits(str) {
+        const product = str.split("").reduce((total, val) => total *= parseInt(val));
+
+        if(product < 10) {
+            console.log(product);
+            return product;
+        } else {
+            return multiplyDigits(product.toString())
+        }
+    }
+
+    
+}
+
+
+sumDigProd(16, 28);
+// 16 + 28 = 44
+// 4 * 4 =  16
+// 1 * 6 = 6
+
+sumDigProd(0);
+
+sumDigProd(1, 2, 3, 4, 5, 6);
