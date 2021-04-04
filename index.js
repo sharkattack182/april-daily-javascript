@@ -68,36 +68,44 @@
 // Solve Time: 19 minutes
 
 
-function sumDigProd(...nums) {
-    const sum = nums.reduce((total, num) => total += num, 0);
-    const str = sum.toString();
+// function sumDigProd(...nums) {
+//     const sum = nums.reduce((total, num) => total += num, 0);
+//     const str = sum.toString();
 
-    if(str.length === 1) {
-        console.log(sum)
-    } else {
-        return multiplyDigits(str);
-    }
+//     if(str.length === 1) {
+//         console.log(sum)
+//     } else {
+//         return multiplyDigits(str);
+//     }
 
-    function multiplyDigits(str) {
-        const product = str.split("").reduce((total, val) => total *= parseInt(val));
+//     function multiplyDigits(str) {
+//         const product = str.split("").reduce((total, val) => total *= parseInt(val));
 
-        if(product < 10) {
-            console.log(product);
-            return product;
-        } else {
-            return multiplyDigits(product.toString())
-        }
-    }
+//         if(product < 10) {
+//             console.log(product);
+//             return product;
+//         } else {
+//             return multiplyDigits(product.toString())
+//         }
+//     }
 
     
-}
+// }
 
 
-sumDigProd(16, 28);
-// 16 + 28 = 44
-// 4 * 4 =  16
-// 1 * 6 = 6
+// sumDigProd(16, 28);
+// // 16 + 28 = 44
+// // 4 * 4 =  16
+// // 1 * 6 = 6
 
-sumDigProd(0);
+// sumDigProd(0);
 
-sumDigProd(1, 2, 3, 4, 5, 6);
+// sumDigProd(1, 2, 3, 4, 5, 6);
+
+
+
+// Find All Digits
+// Taking each four digit number of an array in turn, return the number that you are on when all of the digits 0-9 have been discovered. If not all of the digits can be found, return "Missing digits!".
+// Difficulty: Very Hard
+// Date: April 3 2021
+// Solve Time: 
